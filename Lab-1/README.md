@@ -32,7 +32,7 @@ Functionalities
 			(Presentation Layer - MainPage.ejs)
 			
 			
-6> index.js and user.js contains the Business Logic for AdminActor and AdminVoter respectiverly
+6> index.js and user.js contains the Business Logic for AdminActor and AdminVoter respectively
 
 
 
