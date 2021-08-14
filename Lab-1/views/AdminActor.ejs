@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body style=" text-align: center; margin-top: 4cm; background-image: url(/images/1.jpg); background-size:100% 370%; background-repeat: no-repeat; ">
+  
+   <div class="box">
+    <form method="POST" action="/RegisterCandidate">
+     <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:snow; ">Enroll the Candidate</h1>   
+     <label style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:snow; font-size: 16px;">Enter Student ID</label><br>
+    <input required name="StudentID" type="number" /><br /> <br />
+    <label style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:snow; font-size: 16px;">Enter Name</label><br>
+    <input  required minlength="3" name="Name" type="text" /><br /> <br />
+    <button class="button" style="vertical-align: middle;"><span>Submit</span></button>
+  
+    </form>
+    <% if(show){ %>
+      <h1 style="color:seashell;">Candidate Enrolled Sucessfully</h1> 
+     <% } %>
+    </div>
+  </body>
+</html>

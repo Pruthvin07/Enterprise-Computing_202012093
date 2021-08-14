@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body style=" text-align: center; margin-top: 4cm; background-image: url(/images/1.jpg); background-size:100% 370%; background-repeat: no-repeat; ">
+    <div class="box">
+    <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:snow; ">Vote :</h1>
+    <% if(show){ %>
+      <h1 style="color: snow;"> <%=msg%> </h1> 
+     <% } %>
+    <form method="POST" action="/users/vote" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:snow; font-size: 20px; ">
+      <label style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:snow; font-size: 16px;">Enter Student ID</label><br>
+      <input required type="number" name="StudentID" /> <br>
+      
+      <% for(var cur in list ){ %>
+        <br>
+        <%=list[cur]%> <input type="radio" name="CandidateID" value="<%=cur%>" >
+      <% } %>
+      
+      <br><br>
+      <button class="button" style="vertical-align: middle;"><span>Vote </span></button>   
+    </form>   
+    </div>    
+  </body>
+</html>

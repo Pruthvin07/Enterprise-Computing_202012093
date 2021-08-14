@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body style=" text-align: center; margin-top: 2.5cm; background-image: url(/images/1.jpg); background-size:100% 170%; background-repeat: no-repeat; ">
+      <div  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:snow; font-size: 16px; ">
+   <h1>Poll Result :</h1>
+    <%if(data.length > 0) {%> 
+    <h2>Won : <%=data[0].Name%> - (<%=data[0].Vote%>) </h2>
+     <h2>Lost : <%=data[1].Name%> - (<%=data[1].Vote%>) </h2>  
+      
+     <%}else{%>
+      <h2 style="color: snow;"> NOTE-- NO votes casted yet </h2>
+    <%}%>
+</div>
+   <br><br>
+   <div style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:snow; font-size: 16px; ">
+   <h1>Voting Report :</h1>
+   <% for(let a=0;a < data.length ; a++){ %>
+            
+            <h2> <%=data[a].Name %> - (<%=data[a].Vote%>)   </h2>
+    <%}%>
+</div>
+</body>
+</html>
